@@ -1,1 +1,13 @@
+# Python tests related
 
+
+# Idea related
+.idea
+
+# cypress tests artifacts
+/cypress_test/cypress/screenshots/
+/cypress_test/cypress/downloads/
+/cypress_test/cypress/videos/
+
+# cypress modules
+/cypress_test/node_modules
