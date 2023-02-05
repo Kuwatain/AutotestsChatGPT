@@ -11,3 +11,4 @@
 
 # cypress modules
 /cypress_test/node_modules
+ PythonTest/__pycache__
