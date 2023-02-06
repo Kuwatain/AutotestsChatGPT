@@ -1,9 +1,5 @@
 services:
   cypress-test:
-    build:
-      context: .
-      dockerfile: cypress.Dockerfile
+    image: kuwatain/gpt-tests-cypress
   python-test:
-    build:
-      context: .
-      dockerfile: python.Dockerfile
+    image: kuwatain/gpt-tests-python
