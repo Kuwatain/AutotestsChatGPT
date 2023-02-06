@@ -1,0 +1,9 @@
+services:
+  cypress-test:
+    build:
+      context: .
+      dockerfile: cypress.Dockerfile
+  python-test:
+    build:
+      context: .
+      dockerfile: python.Dockerfile
