@@ -1,0 +1,22 @@
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  DOCKER_USERNAME: my-docker-hub-username
+  DOCKER_PASSWORD: ${{ secrets.DOCKER_HUB_TOKEN }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image Backend
+      run: |
+        docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    - name: Push the Docker image to Docker Hub
+      uses: docker/push-action@v2
+      with:
+        push_reference: my-docker-hub-username/my-image-name:$(date +%s)
